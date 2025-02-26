@@ -1,0 +1,98 @@
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA> mkdir TestingJs
+
+
+----                 -------------         ------ ----
+Initialized empty Git repository in D:/CURSOS/10-INTRODUCCION-TESTING-JAVASCRIPT/01-PRACTICA/.git/
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA> cd TestingJs
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\TestingJs> git init
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\TestingJs> cd ..
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA> cd .\02-TestingJs\
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs> git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs> cd demos
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos> npm init -y
+Wrote to D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos\package.json:
+
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos> npm install --save-dev jest
+sted way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+added 266 packages, and audited 267 packages in 1m
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos> npm run test
+
+> demos@1.0.0 test
+
+ PASS  src/01-sum.test.js
+  √ adds 1 + 2 to equal 3 (9 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.85 s
+Ran all test suites.
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos> npm run test
+
+> demos@1.0.0 test
+> jest
+
+ FAIL  src/01-sum.test.js
+  × adds 1 + 2 to equal 3 (14 ms)
+
+  ● adds 1 + 2 to equal 3
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 3
+
+      2 |
+      3 | test('adds 1 + 2 to equal 3', () => {
+    > 4 |   expect(sum(1, 2)).toBe(2);
+        |                     ^
+      6 |
+
+      at Object.toBe (src/01-sum.test.js:4:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        1.916 s, estimated 2 s
+Ran all test suites.
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos> npm run test
+
+> demos@1.0.0 test
+> jest
+
+ PASS  src/01-sum.test.js
+  √ adds 1 + 2 to equal 3 (8 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.306 s, estimated 2 s
+Ran all test suites.
+PS D:\CURSOS\10-INTRODUCCION-TESTING-JAVASCRIPT\01-PRACTICA\02-TestingJs\demos>
