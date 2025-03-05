@@ -52,11 +52,11 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     container:
-      image: node18
+      image: node14
 
     services:
       mongo-e2e:
-        image: mongo 4.4
+        image: mongo:4.4
         ports:
           - 27017:27017
         env:
