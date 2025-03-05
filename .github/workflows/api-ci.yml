@@ -14,7 +14,7 @@ defaults:
 
 jobs:
   uni-test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
