@@ -64,7 +64,7 @@ jobs:
           MONGO_INITDB_ROOT_PASSWORD: test123
 
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
       - name: install
         shell: bash
